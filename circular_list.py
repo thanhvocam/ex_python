@@ -1,5 +1,5 @@
-a = [1,2,3,4,5,6,7]
-b = [4,5,6,7,1,2,3]
+a = [1,5,2,5,5,6,7]
+b = [5,2,5,5,6,7,1]
 first_element_idx = None
 
 if len(a) != len(b):
@@ -8,7 +8,7 @@ if len(a) != len(b):
 for i in range(len(a)):
     if b[0] == a[i]:
         first_element_idx = i
-
+        break
 comparison_results = []
 
 for i in range(first_element_idx, len(a)):
