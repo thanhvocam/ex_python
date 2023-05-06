@@ -1,16 +1,14 @@
 a = [1,5,2,5,5,6,7]
 b = [5,5,6,7,1,5,2]
 first_element_idx = None
-ls_first_element_idx = []
+
 
 if len(a) != len(b):
     print("Not circularly identical!")
 
 for i in range(len(a)):
-    if b[0] == a[i]:
+    if b[0] == a[i] and b[1] == a[i+1]:
         first_element_idx = i
-        ls_first_element_idx.append(first_element_idx)
-print(ls_first_element_idx)
         
 comparison_results = []
 
