@@ -1,4 +1,3 @@
-import numpy as np
 from scipy.optimize import minimize_scalar
 
 # Hàm chi phí để đo lượng ảnh hưởng của số lần quảng cáo lên trải nghiệm người dùng
@@ -20,9 +19,6 @@ def optimize_ad_count():
 
     # Trả về số lần quảng cáo tối ưu
     return optimization_result.x
-
-import numpy as np
-from scipy.optimize import minimize_scalar
 
 # Hàm chi phí của chiến dịch marketing
 def cost_function2(marketing_budget):
@@ -47,3 +43,9 @@ def optimize_marketing_budget():
 
     # Trả về số tiền ngân sách marketing tối ưu
     return optimization_result.x
+
+def cost_function3(x):
+    x1, x2, x3 = x[0], x[1], x[2]
+    cost = 100*x1 + 150*x2 + 130*x3 + 0.01*x1*x2 + 0.02*x2*x3 - 10000
+    return cost
+
