@@ -1,5 +1,5 @@
-a = [1,5,2,5,5,6,7]
-b = [5,5,6,7,1,5,2]
+a = [1,5,5,5,5,5,6,7]
+b = [5,5,5,5,6,7,1,5]
 first_element_idx = None
 
 
@@ -7,9 +7,10 @@ if len(a) != len(b):
     print("Not circularly identical!")
 
 for i in range(len(a)):
-    if b[0] == a[i] and b[1] == a[i+1]:
+    if b[0] == a[i]:
         first_element_idx = i
-        
+   
+print(first_element_idx)
 comparison_results = []
 
 
